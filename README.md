@@ -8,7 +8,7 @@ To address these challenges, we will conduct a comprehensive analysis of the piz
 
 ## Questions
 
-## 1. Best selling pizza categories
+## 1. What are the best-selling pizza categories?
 ```sql
 SELECT 
     pizza_category,
@@ -22,4 +22,5 @@ ORDER BY total_revenue DESC;
 ```
 ### Reult:
 <img width="470" height="96" alt="Screenshot 2025-11-30 205044" src="https://github.com/user-attachments/assets/e445cf98-b393-4aa5-84d3-3a40a42af098" />
+
 Sorting by total sales in descending order provides a clear ranking of the most profitable categories. For example, the result could show that the ‘Classic’ category generates the highest share of sales at 35%, followed by ‘Supreme’ at 28%, while “Veggie” pizzas may only contribute 20% and ‘Chicken’ varieties 17% to total sales.
