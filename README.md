@@ -41,7 +41,7 @@ FROM pizza_sales
 GROUP BY pizza_category
 ORDER BY total_revenue DESC;
 ```
-### Reult:
+### Result:
 <img width="470" height="96" alt="Screenshot 2025-11-30 205044" src="https://github.com/user-attachments/assets/e445cf98-b393-4aa5-84d3-3a40a42af098" />
 
 This analysis forms a fundamental basis for strategic decisions in the areas of menu engineering, pricing policy and marketing. It helps to focus resources on the most profitable categories while identifying potential for less successful categories.
