@@ -12,7 +12,8 @@ To address these challenges, we will conduct a comprehensive analysis of the piz
   SELECT(SUM(total_price) / COUNT(DISTINCT order_id)) AS Avg_order_Value FROM pizza_sales.
 ```
 ### Result:
-<img width="130" height="39" alt="Screenshot 2025-11-30 211827" src="https://github.com/user-attachments/assets/4d1daad7-408f-4155-9eb9-0d71d9d2e735" />
+<img width="128" height="38" alt="Screenshot 2025-11-30 220254" src="https://github.com/user-attachments/assets/5cb4467d-81dd-48a8-83ea-1faf3d7c4632" />
+
 
 The average order value serves as a fundamental basis for assessing the financial health of the business. A rising AOV indicates that customers are spending more per transaction, which directly increases profitability without the need to acquire new customers.
 
