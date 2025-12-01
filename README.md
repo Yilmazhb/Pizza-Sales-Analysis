@@ -46,7 +46,43 @@ ORDER BY total_revenue DESC;
 
 This analysis forms a fundamental basis for strategic decisions in the areas of menu engineering, pricing policy and marketing. It helps to focus resources on the most profitable categories while identifying potential for less successful categories.
 
-## 4. What are the most profitable pizza sizes?
+## 4. What are the top five pizzas by revenue?
+```sql
+ SELECT Top 5 pizza_name, SUM(total_price) AS Total_Revenue
+    FROM pizza_sales
+    GROUP BY pizza_name
+    ORDER BY Total_Revenue DESC
+```
+### Result:
+<img width="275" height="114" alt="Screenshot 2025-12-01 171748" src="https://github.com/user-attachments/assets/5163d5f5-9140-49aa-b95b-d74ab44fa19e" />
+
+This analysis identifies the absolute sales champions in the pizza range the five pizzas that make the highest financial contribution to the business's success. The query produces a clear ranking of the most profitable pizza varieties based on their cumulative total sales.
+
+## 5. What are the bottom five pizzas by revenue?
+```sql
+SELECT Top 5 pizza_name, SUM(total_price) AS Total_Revenue
+    FROM pizza_sales
+    GROUP BY pizza_name
+    ORDER BY Total_Revenue ASC
+```
+### Result: 
+<img width="269" height="112" alt="Screenshot 2025-12-01 173059" src="https://github.com/user-attachments/assets/0953cf4f-e414-40f7-b3a5-ffd9aa7808c1" />
+
+This analysis identifies the weakest revenue generators in the pizza range, the five pizzas that make the smallest financial contribution to the business's success. In contrast to the previous query, which showed the top performers, this evaluation reveals the ‘underperformers’ or problem children on the menu.
+
+## 6. Which pizzas rank in the top 5 based on total orders?
+```sql
+SELECT Top 5 pizza_name, COUNT(DISTINCT order_id) AS Total_Orders
+    FROM pizza_sales
+    GROUP BY pizza_name
+    ORDER BY Total_Orders DESC
+```
+### Result:
+<img width="261" height="113" alt="Screenshot 2025-12-01 173622" src="https://github.com/user-attachments/assets/dc31846a-d1f4-45a2-b98c-143e3f741715" />
+
+This analysis identifies the most popular pizzas in the range based on their pure order frequency,  the five pizzas that are most frequently requested by customers. In contrast to the sales analysis, which looks at financial value, this metric measures pure popularity and customer demand.
+
+## 7. What are the most profitable pizza sizes?
 ```sql
 SELECT 
     pizza_size,
@@ -64,7 +100,7 @@ ORDER BY total_revenue DESC;
 
 These findings are of strategic importance for pricing policy, product range design and marketing. They help to focus resources on the most profitable sizes, optimise pricing strategies (incentives to buy larger pizzas) and plan production in line with value-creating demand.
 
-## 5. What does the analysis of monthly revenue development reveal about business performance?
+## 8. What does the analysis of monthly revenue development reveal about business performance?
 ```sql
 SELECT 
     FORMAT(order_date, 'MMMM', 'en-US') AS Month_Name_EN,
