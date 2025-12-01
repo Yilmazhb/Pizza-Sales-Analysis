@@ -2,6 +2,7 @@
 
 ## Technologies Used:
 Tool: Microsoft SQL
+
 Skills: aggregation functions, Case, date/time functions, AOV, Data Transformation
 
 ## Business Problem
