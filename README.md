@@ -29,7 +29,7 @@ FROM pizza_sales
 
 In sales and marketing, this metric reveals potential for improvement. If the value is close to 1.0, this could represent an opportunity for targeted upselling, for example by promoting combination offers or additional products. At the same time, it is an important early indicator of changes in customer behaviour a falling value could indicate changing eating habits or an unfavourable pricing policy.
 
-## 3. What are the best-selling pizza categories?
+## 3. What are the best selling pizza categories?
 ```sql
 SELECT 
     pizza_category,
