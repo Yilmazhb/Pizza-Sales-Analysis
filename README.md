@@ -64,3 +64,19 @@ ORDER BY total_revenue DESC;
 
 These findings are of strategic importance for pricing policy, product range design and marketing. They help to focus resources on the most profitable sizes, optimise pricing strategies (incentives to buy larger pizzas) and plan production in line with value-creating demand.
 
+## 5. What does the analysis of monthly revenue development reveal about business performance?
+```sql
+SELECT 
+    FORMAT(order_date, 'MMMM', 'en-US') AS Month_Name_EN,
+    COUNT(DISTINCT order_id) AS Total_Orders,
+    SUM(total_price) AS Total_Revenue
+FROM pizza_sales
+GROUP BY FORMAT(order_date, 'MMMM', 'en-US'), MONTH(order_date)
+ORDER BY MONTH(order_date);
+```
+
+### Result:
+<img width="295" height="247" alt="Screenshot 2025-12-01 160653" src="https://github.com/user-attachments/assets/da71dbc6-da15-4c37-b3cd-174d23ce78cc" />
+
+This monthly analysis is crucial for strategic planning. It helps identify seasonal patterns, plan marketing campaigns (e.g. special offers in slower months), plan staffing (additional requirements during peak periods) and budget. It also enables comparisons with previous years' months to measure growth or decline and make informed forecasts for the future.
+
