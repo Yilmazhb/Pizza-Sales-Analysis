@@ -45,3 +45,22 @@ ORDER BY total_revenue DESC;
 <img width="470" height="96" alt="Screenshot 2025-11-30 205044" src="https://github.com/user-attachments/assets/e445cf98-b393-4aa5-84d3-3a40a42af098" />
 
 This analysis forms a fundamental basis for strategic decisions in the areas of menu engineering, pricing policy and marketing. It helps to focus resources on the most profitable categories while identifying potential for less successful categories.
+
+## 4. What are the most profitable pizza sizes?
+```sql
+SELECT 
+    pizza_size,
+    COUNT(*) as pizza_count,
+    SUM(total_price) as total_revenue,
+    ROUND(AVG(unit_price), 2) as average_price,
+    ROUND(SUM(total_price) / SUM(quantity), 2) as revenue_per_pizza,
+    ROUND(SUM(total_price) * 100.0 / SUM(SUM(total_price)) OVER(), 2) as revenue_percentage
+FROM pizza_sales
+GROUP BY pizza_size
+ORDER BY total_revenue DESC;
+```
+### Result:
+<img width="547" height="117" alt="Screenshot 2025-12-01 133402" src="https://github.com/user-attachments/assets/47374561-5829-4e4f-a425-80928cd2720e" />
+
+These findings are of strategic importance for pricing policy, product range design and marketing. They help to focus resources on the most profitable sizes, optimise pricing strategies (incentives to buy larger pizzas) and plan production in line with value-creating demand.
+
